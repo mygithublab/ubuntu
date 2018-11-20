@@ -1,5 +1,6 @@
 #!/bin/bash
 
+docker login
 docker build -t github-ubuntu-image .
 #docker rm -f github-ubuntu-container
 
