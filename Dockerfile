@@ -2,7 +2,7 @@
 #Author: mygithublab@126.com
 #Nagios NARP integration
 
-FROM ubuntu 16.04
+FROM ubuntu:16.04
 
 #Maintainer information
 MAINTAINER Mygithub (mygithublab@126.com)
