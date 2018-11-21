@@ -69,6 +69,10 @@ RUN cd /tmp \
  && sed -i '$a nrpe \t 5666\/tcp' /etc/services \
  && sed -i '5 s/yes/no/g' /etc/xinetd.d/nrpe \
  && sed -i '13 s/^/#/' /etc/xinetd.d/nrpe \
+#Check NRPE fouction
+ && netstat -at | egrep "nrpe|5666" \
+ && /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1 \
+
 #Clean /tmp folder
  && rm -rf /tmp/*
 
