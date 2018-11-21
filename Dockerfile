@@ -52,7 +52,7 @@ RUN cd /tmp \
  && make install \
 #create nagios account 
  && useradd nagios \
- && groupadd nagios \
+# && groupadd nagios \
  && usermod -a -G nagios nagios \
  && chown nagios.nagios /usr/local/nagios \
  && chown -R nagios.nagios /usr/local/nagios/libexec \
