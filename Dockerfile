@@ -69,8 +69,6 @@ RUN cd /tmp \
  && sed -i '$a nrpe \t 5666\/tcp' /etc/services \
  && sed -i '5 s/yes/no/g' /etc/xinetd.d/nrpe \
  && sed -i '13 s/^/#/' /etc/xinetd.d/nrpe \
-#check nagios installation status
- && /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg \
 #Clean /tmp folder
  && rm -rf /tmp/*
 
